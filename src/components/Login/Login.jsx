@@ -12,7 +12,7 @@ function Login() {
    async function handleClick(e){
            e.preventDefault();
             let item={email,password};
-           let result=await fetch("http://localhost:3002/login",{
+           let result=await fetch("http://localhost:3000/login",{
             method:'POST',
             headers:{
                 "Content-Type":"application/json",
