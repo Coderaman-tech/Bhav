@@ -7,7 +7,7 @@ function Navbar() {
     <div className='n-wrapper' >
       <div className='n-left'>
         <div className="n-name">Bhav</div>
-        <span>toggle</span>
+        {/* <span>toggle</span> */}
       </div>
       <div className='n-right'>
         <div className="n-list">
@@ -15,8 +15,8 @@ function Navbar() {
             <ul style={{listStyleType:'none', color:'white'}}>
                 <Link to='/'><li>Home</li></Link>
                 <li>Services</li>
-                <li>Experiences</li>
-                <li>Portfolio</li>
+                {/* <li>Experiences</li>
+                <li>Portfolio</li> */}
                 <li>Testimonials</li>
             </ul>
         </div>

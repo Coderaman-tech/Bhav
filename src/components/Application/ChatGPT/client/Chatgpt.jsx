@@ -3,14 +3,11 @@ import './Chatgpt.css'
 import send from './assets/send.svg'
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
+import { Link } from "react-router-dom";
 // import {Helmet} from "react-helmet";
 // import Typekit from 'react-typekit';
 
 function Chatgpt() {
-
-
-
-
 
 let loadInterval; 
 
@@ -99,7 +96,7 @@ const handleSubmit=async(e)=>{
 
   //fetch data from the server
   console.log("promt is - ", data.get('prompt'))
-  const response=await fetch('http://localhost:3005',{
+  const response=await fetch('http://localhost:3009',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
@@ -137,6 +134,11 @@ const handleSubmit=async(e)=>{
 
   return (<>
   <h2 className='header'>Chat GPT</h2>
+  <Link to='/sentiment' className='sentiment'>
+        <button className="button n-button">
+            Sentiment Analysis
+        </button>
+        </Link>
     <div id="app">
         <div id="chat_container">
         </div>

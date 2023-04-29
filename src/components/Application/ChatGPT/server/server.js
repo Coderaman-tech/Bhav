@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/',async(req,res)=>{
-    console.log("hi")
+    // console.log("hi")
     res.status(200).send({
         message:'Hello from Bhav',
     })
@@ -54,4 +54,4 @@ app.post('/',async(req,res)=>{
     // })
 })
 
-app.listen(3005,()=>console.log('Server is running on port http://localhost:3005'));
+app.listen(3009,()=>console.log('Server is running on port http://localhost:3009'));
