@@ -1,0 +1,32 @@
+.senti-header{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--green);
+    text-align: center;
+}
+
+/* #text-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+} */
+
+input[type=text]{
+    width:75%;
+    height:45px;
+    background-color: green;
+    color: white;
+    padding: 42px 42px;
+    margin: 18px 10px;
+}
+
+
+#container{
+    color:white;
+    font-size: 30px;
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    justify-content:inline;
+    gap: 12rem;
+}

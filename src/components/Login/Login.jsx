@@ -45,8 +45,10 @@ function Login() {
                     <input type="password" onChange={(e)=>setPassword(e.target.value)} required/>
                     <label>Password</label>
                 </div>
-
+                <Link to='/chatgpt'>
                 <button type="submit" className='button i-button'>Login</button>
+                </Link>
+                
 
                 <div className="login-register">
                     <p>Don't have an account?</p>

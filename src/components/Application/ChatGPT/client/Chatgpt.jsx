@@ -96,7 +96,7 @@ const handleSubmit=async(e)=>{
 
   //fetch data from the server
   console.log("promt is - ", data.get('prompt'))
-  const response=await fetch('http://localhost:3009',{
+  const response=await fetch('http://localhost:3022',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
