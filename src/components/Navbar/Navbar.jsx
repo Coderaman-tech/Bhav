@@ -13,7 +13,7 @@ function Navbar() {
         <div className="n-list">
             {/* listStyleType:'none' remove dot on the list item */}
             <ul style={{listStyleType:'none', color:'white'}}>
-                <Link to='/'><li>Home</li></Link>
+                <Link to='/'><li id='home'>Home</li></Link>
                 <li>Services</li>
                 {/* <li>Experiences</li>
                 <li>Portfolio</li> */}

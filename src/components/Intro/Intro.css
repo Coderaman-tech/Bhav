@@ -1,20 +1,19 @@
 .intro{
-    display: flex;
-    height: 77vh;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: 1fr 1fr;
+    height: 1200px;
     margin-top: 6rem;
 }
 
 .i-left{
-    display: flex;
-    position: relative;
-    flex: 1;
-    flex-direction: column;
     gap: 2rem;
 }
 
 .i-name{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+     grid-column: auto;
+    
 }
 
 .i-name>:nth-child(1){
@@ -30,13 +29,15 @@
 }
 
 .i-button{
+    margin: 30px;
     width: 6rem;
     height: 3rem;
 }
 
-.i-right{
-    flex: 1;
-   display: flex;
+
+.uses-platform{
+    margin: 200px;
+    grid-column:span 2;
 }
 
 .term1{
@@ -48,9 +49,38 @@
 
 .use-case{
     margin: 40px;
-    display: flex;
-    justify-content: center;
-    justify-content:inline;
+    /* padding-left: 20px; */
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns: repeat(4,200px);
+    display:inline-grid;
+    place-self: center;
     gap: 12rem;
-   
-}
+} 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {background: red;}
+  }
+  
+/*
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .example {background: green;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .example {background: blue;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .example {background: orange;}
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .example {background: pink;}
+  }

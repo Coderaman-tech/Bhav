@@ -42,6 +42,11 @@
     color: var(--green);
 }
 
+#home:hover{
+    cursor: pointer;
+    color: var(--green);
+}
+
 .n-button{
     flex:2;
 }

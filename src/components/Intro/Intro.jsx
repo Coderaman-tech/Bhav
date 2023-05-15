@@ -11,8 +11,7 @@ import { Link } from 'react-router-dom';
 function Intro() {
   return (
     <>
-    <div className='intro'>
-        
+    <div className='intro'>       
         <div className="i-left">
             <div className="i-name">
                 <span>Bhav</span>
@@ -31,8 +30,9 @@ function Intro() {
         <div className="i-right">
         <Lottie style={{height:600}} animationData={Post} />
         </div>
-    </div>
-     <div className="term1">Help for platform</div>
+        <div className="uses-platform">
+
+        <div className="term1">Help for platform</div>
      
      <div className="use-case">
      <img src={twitter} alt="" width={87} height={90}/>
@@ -40,6 +40,10 @@ function Intro() {
      <img src={fb} alt="" width={87} height={90}/>
      <img src={instagram} alt="" width={87} height={90}/>
  </div>
+    </div>
+        </div>
+
+   
  </>
   )
 }
