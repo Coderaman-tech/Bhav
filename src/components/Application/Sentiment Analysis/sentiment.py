@@ -26,7 +26,6 @@ labels = ['Negative', 'Neutral', 'Positive']
 
 # sentiment analysis
 encoded_tweet = tokenizer(tweet_proc, return_tensors='pt')
-# output = model(encoded_tweet['input_ids'], encoded_tweet['attention_mask'])
 output = model(**encoded_tweet)
 
 scores = output[0][0].detach().numpy()
