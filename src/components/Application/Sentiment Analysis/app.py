@@ -2,6 +2,7 @@ from flask import Flask,request,jsonify
 from flask_cors import CORS
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
+from flask import make_response
 
 
 
@@ -17,22 +18,22 @@ labels = ['Negative', 'Neutral', 'Positive']
 
 app=Flask(__name__)
 
-CORS(app)
+cors = CORS(app, resources={r"/api/fetchresult": {"origins": "http://localhost:3000"}})
+
 @app.route('/')
 
 def home():
     return "Hello World"
 
 
-@app.route('/fetchresult',methods=['GET'])
+@app.route('/api/fetchresult',methods=['POST'])
 
 
 def predict():
-    data={"message":"hi aman"}
-    return jsonify(data)
-    message=request.form.get('message')
+   
+    message=request.args.get('message')
+    print(message)
     # return jsonify({'response':message})
-
     # print(type(message))
     # preprocess message
     message_words = []
@@ -56,7 +57,10 @@ def predict():
         l = labels[i]
         s = scores[i]
         result.append(s)
-    return jsonify({'response':str(result)})
+    response = make_response({'response': str(result)})
+    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
+    # return jsonify({'response':"ok aman"})
+    return response
 
 
 
