@@ -32,7 +32,7 @@ def home():
 def predict():
    
     message=request.args.get('message')
-    print(message)
+    # print(message)
     # return jsonify({'response':message})
     # print(type(message))
     # preprocess message

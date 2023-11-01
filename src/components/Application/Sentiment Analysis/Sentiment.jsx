@@ -3,7 +3,7 @@ import './Sentiment.css'
 import graph from '../../../media/images/download.png'
 function Sentiment() {
 
-  const [data, setData] = useState(0);
+  
   const [positive, setPositive] = useState(0);
   const [negative, setNegative] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -19,14 +19,12 @@ function Sentiment() {
 
       const response = await fetch(`http://localhost:5000/api/fetchresult?message=${text}`, { method: "POST" });
       const jsonData = await response.json();
-      setData(jsonData);
-      
-      const jsonString = data.response;
+      const jsonString = jsonData.response;
+      console.log(jsonString)
       const jsonArray = JSON.parse(jsonString);
       setNegative((jsonArray[0]*100).toFixed(2));
       setNeutral((jsonArray[1]*100).toFixed(2));
       setPositive((jsonArray[2]*100).toFixed(2));
-      console.log(negative, neutral, positive);
 
     }
     catch (error) {
