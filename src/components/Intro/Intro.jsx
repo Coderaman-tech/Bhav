@@ -16,7 +16,7 @@ function Intro() {
             <div className="i-name">
                 <span>Bhav</span>
                 <span>
-                Welcome to Bhav - your ultimate social media content assistant. Our cutting-edge sentiment analysis technology provides personalized content recommendations for Twitter, Facebook, LinkedIn, and other platforms. Whether you're a social media influencer, marketer, or business owner, Bhav helps you create engaging content that resonates with your audience.
+               <span style={{color:"#3DEFE9"}}> Welcome to Bhav </span> - your ultimate social media content assistant. Our cutting-edge sentiment analysis technology provides <span style={{color:"#D83BD2"}}> personalized content recommendations </span> for <span style={{color:"#FECC1B"}}>Twitter, Facebook, LinkedIn </span> , and other platforms. Whether you're a social media influencer, marketer, or business owner, Bhav helps you create engaging content that resonates with your audience.
                 </span>
             </div>
             <Link to='/login'>

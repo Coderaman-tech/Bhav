@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className='n-wrapper' >
       <div className='n-left'>
-        <div className="n-name">Bhav</div>
+        <div className="n-name"><Link to='/'>Bhav</Link></div>
         {/* <span>toggle</span> */}
       </div>
       <div className='n-right'>
